@@ -1,4 +1,4 @@
-# Hello, this is a GITHUB repository dedicated to tools useful for the r/hkplace community!
+# GITHUB repository dedicated to the overlay script 2.0
 ![image](https://user-images.githubusercontent.com/30243655/161415131-6242ec27-2718-4428-bca6-137597fbd085.png)
 
 To get this overlay:
