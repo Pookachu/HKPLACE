@@ -21,27 +21,38 @@ https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/
 
 ```
 // ==UserScript==
-// @name         HOLLOWKNIGHT LOGO TEMPLATE
+// @name         Multiple Images RPlace Template
 // @namespace    http://tampermonkey.net/
 // @version      1
 // @description  try to take over the canvas!
-// @author       oralekin
+// @author       MilesZew
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
+// @require      http://code.jquery.com/jquery-3.4.1.min.js
 // @grant        none
 // ==/UserScript==
-if (window.top !== window.self) {
-    window.addEventListener('load', () => {
-            document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
-        (function () {
-            const i = document.createElement("img");
-            i.src = "https://github.com/Pookachu/HKPLACE/blob/main/dotted-place-template.png?raw=true";
-            i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2000px;height: 1000px;";
-            console.log(i);
-            return i;
-        })())
 
-    }, false);
+(function() {
+    'use strict';
+
+if (window.top !== window.self) {
+  window.addEventListener('load', () => {
+    let templates = [
+      {pos: [225, 343], src: 'https://cdn.discordapp.com/attachments/959997011598401557/960251171191283722/HORNET.png', width: 84, height: 78},
+      {pos: [247, 1339], src: 'https://cdn.discordapp.com/attachments/959997011598401557/960259616569188412/dotted_RadianceTemplate.png', width: 94, height: 105}
+    ]
+
+    templates.forEach(i => {
+      let img = document.createElement('img')
+      img.src = i.src
+      img.style = `position: absolute;left: ${i.pos[0]}px;top: ${i.pos[1]}px;image-rendering: pixelated;width: ${i.width}px;height: ${i.height}px;`
+        console.log(i.src)
+
+        document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(img)
+    })
+
+  }, false);
 
 }
+})();
 ```
