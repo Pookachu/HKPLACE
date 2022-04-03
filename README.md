@@ -1,15 +1,20 @@
 # Hello, this is a GITHUB repository dedicated to tools useful for the r/hkplace community!
+![image](https://user-images.githubusercontent.com/30243655/161415131-6242ec27-2718-4428-bca6-137597fbd085.png)
 
 To get this overlay:
 ## 1. Install the Tampermonkey browser addon
-USE THIS FOR CHROME
+USE THIS FOR CHROME: 
 https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
-USE THIS FOR OPERA
+
+USE THIS FOR OPERA: 
 https://addons.opera.com/en/extensions/details/tampermonkey-beta/
-USE THIS FOR FIREFOX
+
+USE THIS FOR FIREFOX: 
 https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/
 ## 2. Click create new script 
+![image](https://user-images.githubusercontent.com/30243655/161415080-e8bb2acc-9cef-458c-8079-f280c740b51c.png)
 ## 3. Remove the default code, and paste this in its place
+![image](https://user-images.githubusercontent.com/30243655/161415119-dabd1837-cc9d-4761-9562-25ab32e0b4d0.png)
 ## 4. Save the script by hitting ctrl+s
 ## 5. Reload the r/place webpage
 ## 6. Done!
