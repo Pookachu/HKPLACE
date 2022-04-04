@@ -20,5 +20,17 @@ if (window.top !== window.self) {
         })())
 
     }, false);
-
+const camera = document
+	.querySelector("mona-lisa-embed")
+	.shadowRoot.querySelector("mona-lisa-camera");
+const waitForPreview = setInterval(() => {
+	const preview = camera.querySelector("mona-lisa-pixel-preview");
+	if (preview) {
+		clearInterval(waitForPreview);
+		const style = document.createElement("style");
+		style.innerHTML =
+			".pixel { clip-path: polygon(-20% -20%, -20% 120%, 37% 120%, 37% 37%, 62% 37%, 62% 62%, 37% 62%, 37% 120%, 120% 120%, 120% -20%); }";
+		preview.shadowRoot.appendChild(style);
+	}
+}, 100);
 }
